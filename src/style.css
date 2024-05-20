@@ -3,6 +3,8 @@
 }
 
 body {
+    display: flex;
+    justify-content: center;
     font-family: "Poppins";
     font-size: 15px;
     background-color: hsl(0, 0%, 98%);
@@ -16,48 +18,49 @@ main {
 }
 
 h1 {
-    font-size: 39px;
+    font-size: 36px;
     font-weight: 200;
     color: hsl(234, 12%, 34%);
-    margin: 22px 0 0 0;
-}
-
-span {
-    font-weight: 600;
+    margin-top: 22px;
 }
 
 h2 {
-    font-size: 21px;
+    font-size: 20px;
     font-weight: 600;
     color: hsl(234, 12%, 34%);
-    margin: 18px 0 0 0;
+    margin-top: 16px;
 }
 
 p {
     font-weight: 400;
     color: hsl(229, 6%, 66%);
-    margin: 16px 0 55px 0;
+    margin: 16px 0 48px 0;
+}
+
+.title-bold {
+    display: block;
+    font-weight: 600;
 }
 
 .main-text {
     text-align: center;
-    width: 30%;
+    max-width: 500px;
 }
 
 .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 1440px;
+    max-width: 1400px;
 }
 
 .box {
-    padding: 10px 25px 30px 35px;
-    border-radius: 5px;
-    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.1);
-    margin: 15px;
-    height: 18em;
-    width: 25em;
+    padding: 12px 28px;
+    border-radius: 4px;
+    box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.1);
+    margin: 16px;
+    height: 248px;
+    max-width: 348px;
 }
 
 .box.supervisor {
@@ -76,49 +79,59 @@ p {
     border-top: 4px solid hsl(212, 86%, 64%);
 }
 
-.box-text {
-    width: 92%;
-    font-size: 15px;
-}
-
 .box p {
     font-size: 13px;
-    margin: 10px 0 10px;
-    padding-right: 40px;
+    margin: 10px 0;
 }
 
 .box-img {
     display: flex;
     justify-content: right;
-    padding: 45px 0 0 0;
+    padding-top: 28px;
 }
 
 .box-push {
     transform: translateY(50%);
 }
 
-@media (max-width: 1622px) {
-    .main-text {
-        width: auto;
-    }
-
-    .main-text h1 {
-        font-size: 34px;
-    }
-}
-
-@media (max-width: 1230px) {
+@media (max-width: 1178px) {
     .box-push {
         transform: translateY(0);
     }
+}
 
-    .main-text h1 {
+@media (max-width: 455px) {
+    h1 {
         font-size: 28px;
+    }
+
+    main {
+        max-width: 400px;
     }
 }
 
-@media (max-width: 775px) {
-    .main-text h1 {
-        font-size: 28px;
+@media (max-width: 375px) {
+    main {
+        max-width: 320px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .box {
+        margin: 16px 0 16px 0;
+    }
+
+    .box p {
+        padding-right: 0;
+    }
+
+    .box-img {
+        padding: 16px 0 16px;
+    }
+
+    .box.calculator {
+        order: 1;
     }
 }
